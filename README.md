@@ -1,5 +1,9 @@
 # springboot-jwt-template
-REST API project with Json Web Token 
+REST API project with Json Web Token.
+
+This template is personalized from:
+* https://github.com/nydiarra/springboot-jwt 
+* [Secure a Spring Boot REST API With JSON Web Token + Reference to Angular Integration](https://medium.com/@nydiarra/secure-a-spring-boot-rest-api-with-json-web-token-reference-to-angular-integration-e57a25806c50)
 
 ### Get JWT token
 ```
