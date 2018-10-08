@@ -11,12 +11,12 @@ Using stack:
 * Lombok plugin
 
 ### Setup instruction
-Required: Java JDK and PostgreSQL server in localhost
+Required: Java JDK 1.8 and PostgreSQL 10 server in localhost
 
-1. Execute scripts in *db* folder in PostgreSQL to create sample database
+1. Execute scripts of *db* folder in PostgreSQL to create sample database
 2. To run application in IDE: `SpringbootJwtApplication.java`
 3. To run application by maven: `mvn springboot:run`
-4. To build JAR package, run: `mvn clean package`
+4. To build JAR package: `mvn clean package`
 
 ### Obtain JWT token
 ```
