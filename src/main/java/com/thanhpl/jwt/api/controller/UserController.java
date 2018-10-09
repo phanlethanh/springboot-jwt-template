@@ -34,7 +34,7 @@ public class UserController {
 	@PreAuthorize("hasAuthority('ADMIN')")
 	public GetUserResponse saveBike(@RequestBody GetUserRequest request) {
 		log.info(JsonUtil.toJson(request));
-		log.info("Inquiry user by username: " + SecurityUtil.getCurrentUserLogin().get());
+		log.info("Inquiry user by username: " + SecurityUtil.getCurrentUser().get());
 		GetUserResponse response = new GetUserResponse();
 		UserDto data = new UserDto();
 		User user = null;

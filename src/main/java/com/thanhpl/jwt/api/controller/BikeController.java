@@ -34,7 +34,7 @@ public class BikeController {
 	@PreAuthorize("hasAuthority('USER')")
 	public SaveBikeResponse saveBike(@RequestBody SaveBikeRequest request) {
 		log.info(JsonUtil.toJson(request));
-		log.info("Save bike by username: " + SecurityUtil.getCurrentUserLogin().get());
+		log.info("Save bike by username: " + SecurityUtil.getCurrentUser().get());
 		SaveBikeResponse response = new SaveBikeResponse();
 		SaveBikeResponseData data = new SaveBikeResponseData();
 		

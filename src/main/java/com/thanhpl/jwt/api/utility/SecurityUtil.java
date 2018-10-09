@@ -8,7 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public final class SecurityUtil {
-	public static Optional<String> getCurrentUserLogin() {
+	public static Optional<String> getCurrentUser() {
 		SecurityContext securityContext = SecurityContextHolder.getContext();
 		return Optional.ofNullable(securityContext.getAuthentication()).map(authentication -> {
 			if (authentication.getPrincipal() instanceof UserDetails) {
