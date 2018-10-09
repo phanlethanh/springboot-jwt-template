@@ -14,6 +14,7 @@ import com.thanhpl.jwt.api.dto.response.SaveBikeResponseData;
 import com.thanhpl.jwt.api.model.Bike;
 import com.thanhpl.jwt.api.service.BikeService;
 import com.thanhpl.jwt.api.utility.JsonUtil;
+import com.thanhpl.jwt.api.utility.SecurityUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,6 +34,7 @@ public class BikeController {
 	@PreAuthorize("hasAuthority('USER')")
 	public SaveBikeResponse saveBike(@RequestBody SaveBikeRequest request) {
 		log.info(JsonUtil.toJson(request));
+		log.info("Save bike by username: " + SecurityUtil.getCurrentUserLogin().get());
 		SaveBikeResponse response = new SaveBikeResponse();
 		SaveBikeResponseData data = new SaveBikeResponseData();
 		

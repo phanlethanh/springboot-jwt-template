@@ -1,4 +1,4 @@
-package com.thanhpl.simple.api;
+package com.thanhpl.jwt.api;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

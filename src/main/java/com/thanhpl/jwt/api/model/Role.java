@@ -22,5 +22,6 @@ public class Role {
 	@Id
 	private String roleId;
 	private String roleName;
+	private String privileges;
 	private String description;
 }

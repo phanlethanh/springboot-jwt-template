@@ -31,12 +31,9 @@ public class AppUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException(String.format("The username %s doesn't exist", username));
 		}
 		List<GrantedAuthority> authorities = new ArrayList<>();
-		List<String> roleNames = roleRepository.getRoleNames(user.getUserId());
-		if (roleNames != null) {
-			for (int i = 0; i < roleNames.size(); i++) {
-				authorities.add(new SimpleGrantedAuthority(roleNames.get(i)));
-			}
-			
+		String[] privileges = roleRepository.getPrivileges(user.getRoleId()).split(",");
+		for (int i = 0; i < privileges.length; i++) {
+			authorities.add(new SimpleGrantedAuthority(privileges[i]));
 		}
 		UserDetails userDetails = new org.springframework.security.core.userdetails.
                 User(user.getUsername(), user.getPassword(), authorities);

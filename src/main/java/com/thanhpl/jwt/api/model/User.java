@@ -30,7 +30,12 @@ public class User {
 	@JsonIgnore
 	private String password;
 	private String fullName;
+	private String roleId;
+	
+	@JsonIgnore
 	private Date createTime;
+	
+	@JsonIgnore
 	private Date updateTime;
 	
 }
