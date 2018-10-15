@@ -22,16 +22,16 @@ Required: Java JDK 1.8 and PostgreSQL 10 server in localhost
 
 **POST** http://localhost:8080/oauth/token
 
-**HEADER**
+**Headers**
 * Authorization: Basic dGVzdGp3dGNsaWVudGlkOlhZN2ttem9OemwxMDA=
 * Content-Type: application/x-www-form-urlencoded
 
-**BODY**
+**Body**
 * grant_type: password
 * username: admin
 * password: jwtpass
 
-**RESPONSE**
+**Response**
 ```json
 {
     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoicGhhbmxldGhhbmg5M0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5NjQ4NzAyLCJhdXRob3JpdGllcyI6WyJBRE1JTiIsIk1FTUJFUiJdLCJqdGkiOiIxNzVmMjM4NS0zMTA2LTQzZjctYTExYy0xZWEwZDRlMjI3OWMiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.w0cBqB0GIA8pnk9kAR3Xz41G3YGK5EZlb5MVK05mbH8",
@@ -46,11 +46,11 @@ Required: Java JDK 1.8 and PostgreSQL 10 server in localhost
 
 **POST** http://localhost:8080/v1/user
 
-**HEADER**
+**Headers**
 * Authorization: Bearer <access_token>
 * Content-Type: application/json
 
-**BODY**
+**Body**
 ```json
 {
     "username": "thanhpl"
