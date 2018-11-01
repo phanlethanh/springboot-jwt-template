@@ -13,5 +13,8 @@ public interface UserRepository extends JpaRepository<User, String> {
 			"WHERE username = :username\r\n", 
 			nativeQuery = true)
 	User findByUsername(@Param("username") String username);
-
+	
+	@Query(value = "SELECT max(to_number(user_id, '9999999999')) + 1 FROM public.m_user", 
+			nativeQuery = true)
+	Long getNextId();
 }

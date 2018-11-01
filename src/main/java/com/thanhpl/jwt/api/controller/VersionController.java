@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.thanhpl.jwt.api.config.AppProperties;
 
-
-
 @RestController
 @RequestMapping({ "/" })
 public class VersionController {
